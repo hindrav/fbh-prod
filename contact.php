@@ -1,14 +1,12 @@
 <?php
-    $email_to = "hindrave@gmail.com";
+if(isset($_POST['submit'])){
+    $to = "hindrave@gmail.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $name = $_POST['name'];
+    $subject = $_POST['text'];
+    $message = $_POST['message'];
 
-    $name = $_POST['name']; // required
-    $email_from = $_POST['email']; // required
-    $subject = $_POST['text']; // required
-    $message = $_POST['message']; // required
-
-    //Creating mail headers
-    $headers = 'From: '.$email_from."\r\n".
-    'Reply-To: '.$email_from."\r\n" .
-    'X-Mailer: PHP/' . phpversion();
-    @mail($email_to, $subject, $email_message, $headers);
+    $headers = "From:" . $from;
+    mail($to,$subject,$message,$headers);
+    }
 ?>
