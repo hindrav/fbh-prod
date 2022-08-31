@@ -1,13 +1,20 @@
 <?php
-if(isset($_POST['submit'])){
-    $to = "hindrave@gmail.com"; // this is your Email address
-    $from = $_POST['email']; // this is the sender's Email address
-    $name = $_POST['name'];
-    $subject = $_POST['text'];
-    $message = $_POST['message'];
+$name = $_POST['name'];
+$mail = $_POST['email'];
+$subject = $_POST['subject'];
+$msg = $_POST['message'];
 
-    $headers = "From:" . $from;
-    mail($to,$subject,$message,$headers);
-    header("Location: index.html");
-    }
+$header = 'From: ' . $mail . " \r\n";
+$header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
+$header .= "Mime-Version: 1.0 \r\n";
+$header .= "Content-Type: text/plain";
+$message = "Saludos Staff de Lucsax. \n\n Mi nombre es:  " . $name . ", los contacto a través de su plataforma en línea lucsax.net. \r\n\n";
+$message .= $_POST['msg'] . " \r\n\n";
+$message .= "\n Date message: " . date('d/m/Y', time());
+
+$to = 'hindrave@gmail.com';
+
+mail($to, $subject, utf8_decode($message), $header);
+
+header("Location:index.html");
 ?>
