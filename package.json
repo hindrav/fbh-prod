@@ -1,0 +1,22 @@
+{
+  "name": "fbh",
+  "version": "1.0.0",
+  "description": "FBH PORTFOLIO",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hindrav/fbh-prod.git"
+  },
+  "author": "Hindra Estrada (hindrav.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hindrav/fbh-prod/issues"
+  },
+  "homepage": "https://github.com/hindrav/fbh-prod#readme",
+  "dependencies": {
+    "firebase": "^9.9.3"
+  }
+}
