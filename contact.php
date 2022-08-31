@@ -13,5 +13,5 @@ $to = 'hindrave@gmail.com';
 
 mail($to, $subject, utf8_decode($msg), $header);
 
-header("Location:index.html");
+header("location:index.html");
 ?>
