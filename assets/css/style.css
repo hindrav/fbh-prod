@@ -82,7 +82,7 @@ button {
 # Header
 --------------------------------------------------------------*/
 #header {
-  height: 70px;
+  height: 60px;
   transition: all 0.5s;
   z-index: 997;
   background: #000;
@@ -126,6 +126,15 @@ button {
 @media (max-width: 992px) {
   #header {
     height: 60px;
+  }
+}
+
+@media (min-width: 1024px){
+  #header {
+    height: 75px;
+  }
+  #header .logo img{
+    max-height: 50px;
   }
 }
 
