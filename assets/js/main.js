@@ -1,6 +1,14 @@
 (function() {
   "use strict";
 
+  // Loader before page load
+  window.onload = () => {
+    let loader = document.querySelector(".loader");
+    loader.style.visibility = "hidden";
+    loader.style.opacity = "0";
+  }
+
+
   /**
    * Easy selector helper function
    */

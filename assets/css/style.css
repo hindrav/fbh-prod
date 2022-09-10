@@ -8,6 +8,28 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+.loader{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 9999;
+  background: black;
+}
+
+.loader-spinner{
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  border-top-color: #F9A908;
+  animation: spin 1s linear infinite;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
